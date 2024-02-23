@@ -7,3 +7,7 @@ def counter(request):
     page = text_file.read()
     text_file.close()
     return HttpResponse(page)
+def basic(request):
+    text_file = open("./templates/countej.html", "r")
+    page = text_file.read()
+    text_file.close()
