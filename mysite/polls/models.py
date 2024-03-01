@@ -1,4 +1,7 @@
+import datetime
 from django.db import models
+from django.utils import timezone
+
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
@@ -17,9 +20,5 @@ class Choice(models.Model):
     def __str__(self):
         return self.choice_text
 
-    import datetime
-
-from django.db import models
-from django.utils import timezone
 
 
