@@ -22,6 +22,15 @@
             width='100px'
             style="color: transparent; object-fit: contain; height: 100%; margin: 10px auto"/>
     </div>
+    {% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
 </body>
 <script>
     var c = document.getElementById('counter');
