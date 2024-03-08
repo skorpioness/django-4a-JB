@@ -1,17 +1,34 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pl">
 <head>
-<title>Our Funky HTML Page</title>
-<meta name="description" content="Our first page">
-<meta name="keywords" content="html tutorial template">
+    <title>First View</title>
 </head>
 <body>
-    Content goes here.
-    <button style="background-color: blue;" onclick="countClick()">hello world</button>
+    <h1>Home Page</h1>
+    <button style='background-color:greenyellow' onclick='countClicks()'>Click me!</button>
+    <br><br>
+    <button>Don't click me</button>
+    <br><br>
+    <select>
+        <option>Mama</option>
+        <option>Tata</option>
+    </select>
+    <label for='counter'>Counter</label>
+    <input id='counter' disabled='true'></input>
+    <h3>Happy Learning :)</h3>
+    <div style="text-align: left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png"
+            alt="Png example"
+            width='100px'
+            style="color: transparent; object-fit: contain; height: 100%; margin: 10px auto"/>
+    </div>
 </body>
 <script>
+    var c = document.getElementById('counter');
     var counter = 0;
-    var countClick =
-    () => alert(`Hello hmtl world! Clicked ${++counter} times.`);
+    var countClicks = () => {
+        if (++counter > 10) alert(`Przestan klikać!`);
+        else c.value = counter;
+    }
 </script>
 </html>
